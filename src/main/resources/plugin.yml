@@ -1,0 +1,5 @@
+name: CloveLib
+main: org.com.clovelib.CloveLib
+version: 1.0
+api-version: 1.19
+description: Shared library for Clove's Plugins.
