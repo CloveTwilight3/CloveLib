@@ -1,4 +1,4 @@
-package org.com.clovelib;
+package com.github.mazeymoos;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
