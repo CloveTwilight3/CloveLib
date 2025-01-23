@@ -2,8 +2,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.mazeymoos0022</groupId>
-    <artifactId>CloveLib</artifactId>
+    <groupId>com.org.clovelib</groupId>
+    <artifactId>clovelib</artifactId>
     <version>1.0.3</version>
     <packaging>jar</packaging>
 
@@ -56,7 +56,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.github.mazeymoos.CloveLib</mainClass>
+                            <mainClass>com.org.clovelib.CloveLib</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -81,7 +81,7 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>Github Packages</name>
+            <name>GitHub mazeymoos0022 Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/mazeymoos0022/CloveLib</url>
         </repository>
     </distributionManagement>
