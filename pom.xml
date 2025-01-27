@@ -4,12 +4,12 @@
 
     <groupId>com.org.clovelib</groupId>
     <artifactId>clovelib</artifactId>
-    <version>1.0.3</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
 
     <name>CloveLib</name>
     <description>A Library plugin for Clove's Plugins</description>
-    <url>https://github.com/mazeymoos0022/CloveLib</url>
+    <url>https://github.com/CloveTwilight3/CloveLib</url>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -73,16 +73,16 @@
     </build>
 
     <scm>
-        <url>https://github.com/mazeymoos0022/CloveLib</url>
-        <connection>scm:git:git://github.com/mazeymoos0022/CloveLib.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/mazeymoos0022/CloveLib.git</developerConnection>
+        <url>https://github.com/CloveTwilight3/CloveLib</url>
+        <connection>scm:git:git://github.com/CloveTwilight3/CloveLib.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/CloveTwilight3/CloveLib.git</developerConnection>
     </scm>
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>GitHub mazeymoos0022 Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/mazeymoos0022/CloveLib</url>
+            <id>github-mazeymoos-clovelib</id>
+            <name>GitHub CloveTwilight3 Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/CloveTwilight3/CloveLib</url>
         </repository>
     </distributionManagement>
 </project>

@@ -48,7 +48,7 @@ public class CloveLib extends JavaPlugin {
     }
 
     // Singleton instance getter
-    public static CloveLib getInstance() {
+    public static CloveLib getInstance(){
         return instance;
     }
 
@@ -68,5 +68,15 @@ public class CloveLib extends JavaPlugin {
 
     public void clearPlayerJailData(UUID playerUUID) {
         jailDataMap.remove(playerUUID);
+    }
+
+    // Command utility to check if a player can use a command
+    public boolean canUseCommand(Player player, String permission) {
+        UUID playerUUID = player.getUniqueId();
+        if (isPlayerJailed(playerUUID)) {
+            player.sendMessage("You are jailed and cannot use this command!");
+            return false;
+        }
+        return true;
     }
 }
