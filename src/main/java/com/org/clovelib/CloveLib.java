@@ -38,9 +38,18 @@ public class CloveLib extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        instance = this;
+        // Initialize the singleton instance
+        if (instance == null) {
+            instance = this;
+            getLogger().info("CloveLib instance has been set successfully.");
+        } else {
+            getLogger().warning("CloveLib instance was already set! Possible duplicate initialization.");
+        }
+
+        // Plugin-specific initialization
         getLogger().info("CloveLib has been initialized!");
     }
+
 
     @Override
     public void onDisable() {
