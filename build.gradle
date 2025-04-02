@@ -1,11 +1,12 @@
 plugins {
     id 'java'
-    id 'com.github.johnrengelman.shadow' version '8.1.1' // replaces assembly plugin
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'maven-publish'
 }
 
-group = 'com.org.clovelib'
-version = '1.3'
-description = 'A Library plugin for Clove\'s Plugins'
+group = 'uk.co.clovetwilight3'
+version = '2.0.0'
+description = 'CloveLib – A Library plugin for Clove\'s Plugins'
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(21))
@@ -23,13 +24,38 @@ dependencies {
     compileOnly 'io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT'
 }
 
-// For shadowing (like jar-with-dependencies)
 shadowJar {
     archiveClassifier.set('all')
     manifest {
         attributes(
-                'Main-Class': 'com.org.clovelib.CloveLib'
+                'Main-Class': 'uk.co.clovetwilight3.clovelib.CloveLib'
         )
+    }
+}
+
+publishing {
+    publications {
+        gpr(MavenPublication) {
+            from components.java
+
+            artifactId = 'clovelib'
+
+            // Optional: include the shadow JAR
+            artifact shadowJar {
+                classifier = 'all'
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            name = 'GitHubPackages'
+            url = uri("https://maven.pkg.github.com/CloveTwilight3/CloveLib")
+            credentials {
+                username = System.getenv("GITHUB_USERNAME")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
     }
 }
 
