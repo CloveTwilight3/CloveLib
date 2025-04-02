@@ -37,7 +37,7 @@ publishing {
     publications {
         gpr(MavenPublication) {
             artifactId = 'clovelib'
-            artifact tasks.shadowJar.get().archiveFile.get().asFile
+            artifact shadowJar.archiveFile
         }
     }
 
