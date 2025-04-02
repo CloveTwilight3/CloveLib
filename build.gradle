@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1' // replaces assembly plugin
+}
+
+group = 'com.org.clovelib'
+version = '1.3'
+description = 'A Library plugin for Clove\'s Plugins'
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'papermc'
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT'
+}
+
+// For shadowing (like jar-with-dependencies)
+shadowJar {
+    archiveClassifier.set('all')
+    manifest {
+        attributes(
+                'Main-Class': 'com.org.clovelib.CloveLib'
+        )
+    }
+}
+
+tasks.build {
+    dependsOn shadowJar
+}
