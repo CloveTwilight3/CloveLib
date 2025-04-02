@@ -36,14 +36,8 @@ shadowJar {
 publishing {
     publications {
         gpr(MavenPublication) {
-            from components.java
-
             artifactId = 'clovelib'
-
-            // Optional: include the shadow JAR
-            artifact shadowJar {
-                classifier = 'all'
-            }
+            artifact tasks.shadowJar.get().archiveFile.get().asFile
         }
     }
 
