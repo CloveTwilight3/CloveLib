@@ -28,7 +28,7 @@ shadowJar {
     archiveClassifier.set('all')
     manifest {
         attributes(
-                'Main-Class': 'uk.co.clovetwilight3.clovelib.CloveLib'
+                'Main-Class': 'uk.co.clovetwilight3.CloveLib'
         )
     }
 }
