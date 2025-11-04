@@ -23,6 +23,11 @@ CloveLib is licensed under the Apache 2.0 License. View the [LICENSE](https://gi
 
 ---
 
+## Help
+If you need help. [join our discord](https://discord.gg/k8HrBvDaQn)
+
+---
+
 Feel free to reach out for feature suggestions or to report issues for any of these plugins!
 
 ---
